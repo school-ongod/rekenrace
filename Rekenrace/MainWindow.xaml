@@ -1,0 +1,61 @@
+﻿<Window
+    x:Class="RekenApplicatie.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="RekenApplicatie"
+    Width="500"
+    Height="350">
+    <Grid>
+        <!--  Panel voor naam en niveau  -->
+        <StackPanel
+            x:Name="startPanel"
+            Margin="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Label Content="Spelersnaam:" />
+            <TextBox
+                x:Name="txtPlayerName"
+                Margin="0,5,0,10"
+                HorizontalAlignment="Stretch" />
+            <Label Content="Niveau:" />
+            <ComboBox
+                x:Name="cbxLevels"
+                Margin="0,5,0,10"
+                HorizontalAlignment="Stretch" />
+            <Button
+                Width="100"
+                Click="btnStart_Click"
+                Content="Start" />
+        </StackPanel>
+
+        <!--  Panel voor vragen  -->
+        <StackPanel
+            x:Name="questionPanel"
+            Margin="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Collapsed">
+            <Label
+                x:Name="lblQuestion"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center" />
+            <TextBox
+                x:Name="txtAnswer"
+                Width="100"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center" />
+            <Button
+                x:Name="btnCheck"
+                Width="100"
+                Margin="0,10,0,10"
+                HorizontalAlignment="Center"
+                Click="btnCheck_Click"
+                Content="Check" />
+            <Label
+                x:Name="lblFeedback"
+                Margin="0,0,0,5"
+                HorizontalAlignment="Center" />
+            <Label x:Name="lblScore" HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>
